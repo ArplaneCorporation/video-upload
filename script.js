@@ -1,11 +1,17 @@
 // script.js
 document.getElementById('uploadForm').addEventListener('submit', function(event) {
   event.preventDefault();
-  const fileInput = document.getElementById('videoInput');
+  const videoInput = document.getElementById('videoInput');
+  const audioInput = document.getElementById('audioInput');
   const videoContainer = document.getElementById('videoContainer');
 
-  if (fileInput.files.length > 0) {
-    const file = fileInput.files[0];
+  if (videoInput.files.length > 0) {
+    const file = videoInput.files[0];
+    const videoElement = document.createElement('video');
+    videoElement.src = URL.createObjectURL(file);
+    videoElement.controls = true;
+ if (audioInput.files.length > 0) {
+    const file = audioInput.files[0];
     const videoElement = document.createElement('video');
     videoElement.src = URL.createObjectURL(file);
     videoElement.controls = true;
