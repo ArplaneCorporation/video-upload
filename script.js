@@ -12,7 +12,7 @@ document.getElementById('uploadForm').addEventListener('submit', function(event)
     videoElement.controls = true;
  if (audioInput.files.length > 0) {
     const file = audioInput.files[0];
-    const videoElement = document.createElement('video');
+    const videoElement = document.createElement('audio');
     videoElement.src = URL.createObjectURL(file);
     videoElement.controls = true;
     videoContainer.appendChild(videoElement);
