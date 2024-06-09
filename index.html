@@ -10,11 +10,16 @@
 <body>
     <div class="container">
         <h1>Audio-Video Merger</h1>
-        <input type="file" id="videoInput" accept="video/*">
-        <input type="file" id="audioInput" accept="audio/*">
+        <div class="file-inputs">
+            <label for="videoInput">Select Video File</label>
+            <input type="file" id="videoInput" accept="video/*">
+            <label for="audioInput">Select Audio File</label>
+            <input type="file" id="audioInput" accept="audio/*">
+        </div>
         <button id="mergeButton">Merge</button>
         <video id="outputVideo" controls></video>
     </div>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@latest/dist/ffmpeg.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
